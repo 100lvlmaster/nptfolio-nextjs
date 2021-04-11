@@ -20,7 +20,7 @@ export default function Home() {
             <span className="">HOME</span>
           </Link>
           <Link href="#work">
-            <span className="bg-gray-900 text-white rounded-md py-2 px-3">
+            <span className="bg-black text-white rounded-md py-2 px-3">
               WORK
             </span>
           </Link>
@@ -41,13 +41,13 @@ export default function Home() {
             </span>
             <div className="flex-grow"></div>
             <Link href="#about">
-              <div className="flex flex-row items-start justify-center lg:justify-end py-28 pl-14 space-x-2">
+              <div className="flex flex-row items-start justify-center lg:justify-end py-28  pl-14 space-x-2">
                 <div className="text-xl">my work</div>
                 <DownArrowSvg className="h-12 w-12" />
               </div>
             </Link>
           </div>
-          <div className="hidden">
+          <div className="hidden lg:inline flex-grow">
             {/* <img src="/img/home_page.png" className="w-max h-max"></img> */}
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
             alt="profile"
           ></img>
           <div className="flex flex-col">
-            <p className="px-5 py-10 text-lg font-medium">
+            <p className="px-5 lg:px-20 py-10 text-lg font-medium">
               {`I have always been fond of movies. The journey from raw footage to a
           production grade film always piqued my interest. Once i graduated from
           college, i turned my passion into my career. I like to work with my
@@ -73,7 +73,11 @@ export default function Home() {
               <LocationSvg />
               <div className="text-lg"> mumbai, india</div>
             </div>
-            <div className="hidden lg:block bg-black flex-grow"></div>
+          </div>
+        </div>
+        <div className="hidden lg:block bg-black flex-grow">
+          <div className="flex flex-col">
+            <div className="p-16 text-xl text-white">Skills</div>
           </div>
         </div>
       </Container>
@@ -87,8 +91,10 @@ export default function Home() {
           <LinkedInSvg />
         </div>
         <div className="flex flex-row justify-center items-center p-2 space-x-5">
-          <LinkedInSvg className="hidden lg:inline" />
-          <BehanceSvg className="hidden lg:inline" />
+          <a>
+            <LinkedInSvg className="hidden lg:inline" />
+          </a>
+          <BehanceSvg className="hidden lg:inline  hover:text-white" />
           <YoutubeLogoSvg />
           <DiscordSvg />
           <InstagramSvg />
