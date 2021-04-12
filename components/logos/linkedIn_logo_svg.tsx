@@ -7,7 +7,7 @@ export const LinkedInSvg = (props) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0)">
+    <g clipPath="url(#clip0)">
       <path
         d="M4.57093 -0.0332642C1.80707 -0.0332642 0 1.78163 0 4.16706C0 6.49981 1.75324 8.36646 4.46488 8.36646H4.51733C7.33526 8.36646 9.08896 6.49981 9.08896 4.16706C9.03627 1.78163 7.33526 -0.0332642 4.57093 -0.0332642Z"
         fill="black"

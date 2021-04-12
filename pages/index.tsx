@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Container className="h-screen" id="home">
         <nav className="flex flex-row p-5 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-2xl font-medium text-xl">
           <LogoSvg className="h-12 w-12 lg:h-16 lg:w-16" />
@@ -54,7 +54,7 @@ export default function Home() {
       </Container>
       <Container className="h-screen" id="about">
         <h1 className="text-3xl p-8">About</h1>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col flex-grow lg:flex-row">
           <img
             className="w-screen lg:w-max lg:rounded-lg lg:w-1/3 lg:h-52 lg:m-10 "
             src="/img/about_img.png"
@@ -75,9 +75,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:block bg-black flex-grow">
-          <div className="flex flex-col">
-            <div className="p-16 text-xl text-white">Skills</div>
+        <div className="hidden lg:flex flex-grow flex-col bg-black">
+          <div className="text-xl p-5 pl-10 text-white">Skills</div>
+          <div className="flex-grow flex flex-row ">
+            <div>
+              <img src="/img/vfx.png" />
+              <img src="/img/audio_correction.png" />
+            </div>
+            <div>
+              <img src="/img/colors_correction.png" />
+              <img src="/img/chroma_key.png" />
+            </div>
+            <div>
+              <img src="/img/editing_post.png" />
+            </div>
           </div>
         </div>
       </Container>

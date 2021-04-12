@@ -7,7 +7,7 @@ export const InstagramSvg = (props) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0)">
+    <g clipPath="url(#clip0)">
       <path
         d="M23.7847 18.3065C23.7847 21.3319 21.3318 23.7848 18.3064 23.7848C15.281 23.7848 12.8281 21.3319 12.8281 18.3065C12.8281 15.2811 15.281 12.8282 18.3064 12.8282C21.3318 12.8282 23.7847 15.2811 23.7847 18.3065Z"
         fill="black"
