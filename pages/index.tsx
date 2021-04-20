@@ -10,6 +10,19 @@ import { LocationSvg } from "../components/logos/location_svg";
 import Link from "next/link";
 
 export default function Home() {
+  // window.addEventListener(
+  //   "scroll",
+  //   () => {
+  //     console.log("adasd");
+  //     document.body.style.setProperty(
+  //       "--scroll",
+  //       `${
+  //         window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+  //       }`
+  //     );
+  //   },
+  //   false
+  // );
   return (
     <div className="flex flex-col">
       <Container className="h-screen" id="home">
@@ -42,8 +55,8 @@ export default function Home() {
             <div className="flex-grow"></div>
             <Link href="#about">
               <div className="flex flex-row items-start justify-center lg:justify-end py-28  pl-14 space-x-2">
-                <div className="text-xl">my work</div>
-                <DownArrowSvg className="h-12 w-12" />
+                <div className="text-xl lg:text-3xl">my work</div>
+                <DownArrowSvg className="h-12 w-12 lg:h-20 lg:w-20" />
               </div>
             </Link>
           </div>
@@ -52,6 +65,24 @@ export default function Home() {
           </div>
         </div>
       </Container>
+      {/* Page two */}
+      <Container className=" bg-dark text-white py-10 flex flex-col space-y-5">
+        <h1 className="text-3xl p-8">Work</h1>
+        <h2 className="p-8 text-2xl">Photography</h2>
+        <div className="flex flex-row overflow-x-auto overflow-y-hidden ">
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>
+        </div>{" "}
+        <div className="flex flex-row overflow-x-auto overflow-y-hidden">
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
+          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>
+        </div>{" "}
+      </Container>
+      {/* Page three */}
       <Container className="h-screen" id="about">
         <h1 className="text-3xl p-8">About</h1>
         <div className="flex flex-col flex-grow lg:flex-row">
@@ -95,20 +126,21 @@ export default function Home() {
       <Container id="contact" className="h-screen items-stretch">
         <h1 className="text-3xl p-8">Find me at</h1>
         <div className="flex-grow"></div>
-        <LogoSvg className="self-center" height="150" width="150" />
+        <LogoSvg className="self-center h-52 w-max lg:h-1/3	" />
         <div className="flex-grow"></div>
         <div className="flex flex-row lg:hidden items-center justify-center space-x-5">
-          <BehanceSvg />
-          <LinkedInSvg />
+          <BehanceSvg href="" />
+          <LinkedInSvg href="https://www.linkedin.com/in/neel-patki-17261119/" />
         </div>
         <div className="flex flex-row justify-center items-center p-2 space-x-5">
-          <a>
-            <LinkedInSvg className="hidden lg:inline" />
-          </a>
-          <BehanceSvg className="hidden lg:inline  hover:text-white" />
-          <YoutubeLogoSvg />
+          <LinkedInSvg
+            href="https://www.linkedin.com/in/neel-patki-17261119/"
+            className="hidden lg:inline"
+          />
+          <BehanceSvg href="" className="hidden lg:inline  hover:text-white" />
+          <YoutubeLogoSvg href="https://www.youtube.com/channel/UCr5copTsSrMFQT4HrbuR3BQ/featured" />
           <DiscordSvg />
-          <InstagramSvg />
+          <InstagramSvg href={"https://www.instagram.com/neil.in/"} />
         </div>
         <div className="text-center  p-10 text-xl">neelpatki@gmail.com</div>
         <div className="text-sm text-center p-4">
