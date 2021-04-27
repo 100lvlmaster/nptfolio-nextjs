@@ -8,6 +8,7 @@ import { LogoSvg } from "../components/logos/logo_svg";
 import { YoutubeLogoSvg } from "../components/logos/youtube_logo";
 import { LocationSvg } from "../components/logos/location_svg";
 import Link from "next/link";
+import { WorkPage } from "../components/work_page";
 
 export default function Home() {
   // window.addEventListener(
@@ -23,10 +24,20 @@ export default function Home() {
   //   },
   //   false
   // );
+  const imageLinks: Array<string> = [
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+    "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
+  ];
   return (
     <div className="flex flex-col">
       <Container className="h-screen" id="home">
-        <nav className="flex flex-row p-5 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-2xl font-medium text-xl">
+        <nav className="flex flex-row p-10 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-2xl font-medium text-xl">
           <LogoSvg className="h-12 w-12 lg:h-16 lg:w-16" />
           <div className="flex-grow" />
           <Link href="#home">
@@ -53,7 +64,7 @@ export default function Home() {
               edit / color / sound / vfx
             </span>
             <div className="flex-grow"></div>
-            <Link href="#about">
+            <Link href="#work">
               <div className="flex flex-row items-start justify-center lg:justify-end py-28  pl-14 space-x-2">
                 <div className="text-xl lg:text-3xl">my work</div>
                 <DownArrowSvg className="h-12 w-12 lg:h-20 lg:w-20" />
@@ -66,25 +77,10 @@ export default function Home() {
         </div>
       </Container>
       {/* Page two */}
-      <Container className=" bg-dark text-white py-10 flex flex-col space-y-5">
-        <h1 className="text-3xl p-8">Work</h1>
-        <h2 className="p-8 text-2xl">Photography</h2>
-        <div className="flex flex-row overflow-x-auto overflow-y-hidden ">
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>
-        </div>{" "}
-        <div className="flex flex-row overflow-x-auto overflow-y-hidden">
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>{" "}
-          <img src="https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3"></img>
-        </div>{" "}
-      </Container>
+      <WorkPage />
       {/* Page three */}
       <Container className="h-screen" id="about">
-        <h1 className="text-3xl p-8">About</h1>
+        <h1 className="text-3xl p-14">About</h1>
         <div className="flex flex-col flex-grow lg:flex-row">
           <img
             className="w-screen lg:w-max lg:rounded-lg lg:w-1/3 lg:h-52 lg:m-10 "
@@ -123,8 +119,8 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <Container id="contact" className="h-screen items-stretch">
-        <h1 className="text-3xl p-8">Find me at</h1>
+      <Container id="contact" className="h-screen">
+        <h1 className="text-3xl p-14">Find me at</h1>
         <div className="flex-grow"></div>
         <LogoSvg className="self-center h-52 w-max lg:h-1/3	" />
         <div className="flex-grow"></div>
