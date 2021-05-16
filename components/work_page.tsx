@@ -19,18 +19,18 @@ export const WorkPage = () => {
   return (
     <Container
       id="work"
-      className=" bg-dark text-white flex items-stretch flex-col w-full"
+      className=" bg-dark text-white flex items-stretch flex-col w-full p-5"
     >
       <h1 className="text-3xl p-5">Work</h1>
       <h2 className="px-10 p-2 text-2xl">Videography</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 gap-y-2 justify-items-center	">
+      <div className="flex flex-row flex-wrap justify-items-center items-center px-4 lg:px-16">
         {mounted
           ? data.map((vid, index) => (
               // <div>}`</div>
               <YouTube
                 videoId={vid.snippet.resourceId.videoId}
                 // id={string} // defaults -> null
-                className={"h-52 w-auto"} // defaults -> null
+                className={"h-52 w-auto p-2"} // defaults -> null
                 // containerClassName={string} // defaults -> ''
                 // opts={obj} // defaults -> {}
                 // onReady={func} // defaults -> noop

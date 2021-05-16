@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="flex flex-col ">
       <Container className="w-full bg-yellow" id="home">
-        <nav className="flex flex-row p-10 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-2xl font-medium text-xl">
+        <nav className="flex flex-row p-10 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-lg font-medium text-xl">
           <LogoSvg className="h-12 w-12 lg:h-16 lg:w-16" />
           <div className="flex-grow" />
           <Link href="#home">
@@ -67,19 +67,33 @@ export default function Home() {
             <Link href="#work">
               <div className="flex flex-row items-start justify-center lg:justify-end py-28  pl-14 space-x-2">
                 <div className="text-xl lg:text-3xl">my work</div>
-                <DownArrowSvg className="h-12 w-12 lg:h-20 lg:w-20" />
+                <DownArrowSvg className="h-12 w-12 lg:h-10 lg:w-10" />
               </div>
             </Link>
           </div>
-          <div className="hidden lg:inline flex-grow">
-            {/* <img src="/img/home_page.png" className="w-max h-max"></img> */}
-          </div>
+          <div className="flex-grow"></div>
         </div>
       </Container>
       {/* Page two */}
       <WorkPage />
       {/* Page three */}
       <Container className="bg-yellow w-full" id="about">
+        <div className="hidden lg:flex flex-grow flex-col bg-dark">
+          <div className="text-xl p-5 pl-10 text-white">Skills</div>
+          <div className="flex-grow flex flex-row ">
+            <div>
+              <img src="/img/vfx.png" />
+              <img src="/img/audio_correction.png" />
+            </div>
+            <div>
+              <img src="/img/colors_correction.png" />
+              <img src="/img/chroma_key.png" />
+            </div>
+            <div>
+              <img src="/img/editing_post.png" />
+            </div>
+          </div>
+        </div>
         <div className="flex flex-col flex-grow p-10">
           <h1 className="text-xl">About me</h1>
           <div className="flex flex-col">
@@ -97,25 +111,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex flex-grow flex-col bg-black">
-          <div className="text-xl p-5 pl-10 text-white">Skills</div>
-          <div className="flex-grow flex flex-row ">
-            <div>
-              <img src="/img/vfx.png" />
-              <img src="/img/audio_correction.png" />
-            </div>
-            <div>
-              <img src="/img/colors_correction.png" />
-              <img src="/img/chroma_key.png" />
-            </div>
-            <div>
-              <img src="/img/editing_post.png" />
-            </div>
-          </div>
-        </div>
+
         <div className="flex flex-row justify-center p-10">
           <svg
-            className={"w-1/4 lg:w-2/12"}
+            className={"w-1/4 lg:w-24"}
             viewBox="0 0 80 80"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
