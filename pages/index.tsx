@@ -9,8 +9,17 @@ import { YoutubeLogoSvg } from "../components/logos/youtube_logo";
 import { LocationSvg } from "../components/logos/location_svg";
 import Link from "next/link";
 import { WorkPage } from "../components/work_page";
-
+import { useRouter } from "next/router";
+import NextHead from "next/head";
 export default function Home() {
+  const router = useRouter();
+  const meta = {
+    title: "Neel Patki – Video Editor, Designer",
+    description: `edit / color / sound / vfx 🚀`,
+    image: "https://vodkality.netlify.app/img/about_img.png",
+    type: "website",
+    url: "https://vodkality.netlify.app",
+  };
   // window.addEventListener(
   //   "scroll",
   //   () => {
@@ -36,6 +45,44 @@ export default function Home() {
   ];
   return (
     <div className="flex flex-col ">
+      <NextHead>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta property="og:url" content={`${meta.url}${router.asPath}`} />
+        <link rel="canonical" href={`${meta.url}${router.asPath}`} />
+        <meta
+          property="og:description"
+          content={meta.description}
+          key="ogsitename"
+        />
+        <meta property="og:image" content={meta.image} key="ogimage" />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:title" content={meta.title} key="ogtitle" />
+        <meta property="og:site_name" content="Neel Patki" key="ogsitename" />
+        <meta property="og:url" content={"${meta.url}"} key="ogurl" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twhandle"
+        />
+        <meta name="twitter:site" content="@vodkality" />
+        <meta name="twitter:creator" content={"@vodkality"} key="twhandle" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+        <meta name="description" content={meta.description} />
+        <meta
+          name="keywords"
+          content="Video editing, VFX, Audio correction, Color correction"
+        />
+        <meta name="author" content="Neel patki" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+      </NextHead>
       <Container className="w-full bg-yellow" id="home">
         <nav className="flex flex-row p-10 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-lg font-medium text-xl">
           <LogoSvg className="h-12 w-12 lg:h-16 lg:w-16" />
