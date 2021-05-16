@@ -19,11 +19,11 @@ export const WorkPage = () => {
   return (
     <Container
       id="work"
-      className=" bg-dark text-white flex items-stretch flex-col"
+      className=" bg-dark text-white flex items-stretch flex-col w-full"
     >
-      <h1 className="text-3xl p-20">Work</h1>
-      <h2 className="p-20 text-2xl">Photography</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-4 p-10">
+      <h1 className="text-3xl p-5">Work</h1>
+      <h2 className="px-10 p-2 text-2xl">Videography</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 gap-y-2 justify-items-center	">
         {mounted
           ? data.map((vid, index) => (
               // <div>}`</div>
@@ -50,7 +50,7 @@ export const WorkPage = () => {
             ))
           : null}
       </div>
-      <h2 className="p-20 text-2xl">Edits</h2>
+      <h2 className="p-10 text-2xl">Photography</h2>
       {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 py-3 pb-24">
         {imageLinks.map((link, index) => (
           <img key={link + index + "sds"} className="" src={link}></img>

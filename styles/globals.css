@@ -7,7 +7,6 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: monospace;
-  background-color: #f2a715;
 }
 /* ::-webkit-scrollbar {
   display: none;
@@ -25,4 +24,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+::selection {
+  background-color: #fefefe;
+  color: #191814;
 }

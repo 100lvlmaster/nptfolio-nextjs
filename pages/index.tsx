@@ -36,21 +36,21 @@ export default function Home() {
   ];
   return (
     <div className="flex flex-col ">
-      <Container className="h-screen w-full" id="home">
+      <Container className="w-full bg-yellow" id="home">
         <nav className="flex flex-row p-10 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-2xl font-medium text-xl">
           <LogoSvg className="h-12 w-12 lg:h-16 lg:w-16" />
           <div className="flex-grow" />
           <Link href="#home">
-            <span className="">HOME</span>
+            <span className="">Home</span>
           </Link>
           <Link href="#work">
             <span className="bg-black text-white rounded-md py-2 px-3">
-              WORK
+              Work
             </span>
           </Link>
 
-          <Link href="#contact">
-            <span className="">CONTACT</span>
+          <Link href="#about">
+            <span className="">Contact</span>
           </Link>
         </nav>
         <div className="flex flex-row flex-grow">
@@ -79,26 +79,21 @@ export default function Home() {
       {/* Page two */}
       <WorkPage />
       {/* Page three */}
-      <Container className="h-screen" id="about">
-        <h1 className="text-3xl p-14">About</h1>
-        <div className="flex flex-col flex-grow lg:flex-row">
-          <img
-            className="w-screen lg:rounded-lg lg:w-1/3 lg:h-52 lg:m-10 "
-            src="/img/about_img.png"
-            alt="profile"
-          ></img>
+      <Container className="bg-yellow w-full" id="about">
+        <div className="flex flex-col flex-grow p-10">
+          <h1 className="text-xl">About me</h1>
           <div className="flex flex-col">
-            <p className="px-5 lg:px-20 py-10 text-lg font-medium">
+            <p className="lg:px-20 py-10 text-md font-medium">
               {`I have always been fond of movies. The journey from raw footage to a
           production grade film always piqued my interest. Once i graduated from
           college, i turned my passion into my career. I like to work with my
           clients and focus on delievering the best content possible.`}
             </p>
             <div className="flex-grow"></div>
-            <div className="flex flex-row p-10 pb-28 items-center">
+            <div className="flex flex-row items-baseline space-x-2">
               <div className="flex-grow"></div>
-              <LocationSvg />
-              <div className="text-lg"> mumbai, india</div>
+              <LocationSvg className="h-5 w-5" />
+              <div className="text-lg">Mumbai,India</div>
             </div>
           </div>
         </div>
@@ -118,27 +113,56 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Container>
-      <Container id="contact" className="h-screen">
-        <h1 className="text-3xl p-14">Find me at</h1>
-        <div className="flex-grow"></div>
-        <LogoSvg className="self-center h-52 w-max lg:h-1/3	" />
-        <div className="flex-grow"></div>
-        <div className="flex flex-row lg:hidden items-center justify-center space-x-5">
-          <BehanceSvg href="" />
-          <LinkedInSvg href="https://www.linkedin.com/in/neel-patki-17261119/" />
+        <div className="flex flex-row justify-center p-10">
+          <svg
+            className={"w-1/4 lg:w-2/12"}
+            viewBox="0 0 80 80"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="40" cy="40" r="40" fill="#060606" />
+            <path
+              d="M56.2634 24.4V58H49.8794L33.1274 37.6V58H25.4474V24.4H31.8794L48.5834 44.8V24.4H56.2634Z"
+              fill="white"
+            />
+            <rect
+              x="47.5045"
+              y="33"
+              width="27.8375"
+              height="7.17569"
+              transform="rotate(50.7062 47.5045 33)"
+              fill="#060606"
+            />
+            <rect
+              x="22.9332"
+              y="26.2196"
+              width="27.3417"
+              height="7.14548"
+              rx="3.57274"
+              transform="rotate(49.4663 22.9332 26.2196)"
+              fill="#060606"
+            />
+          </svg>
         </div>
         <div className="flex flex-row justify-center items-center p-2 space-x-5">
+          <BehanceSvg href="" className="hover:text-white" />
+          <DiscordSvg />
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fillRule="evenodd"
+            clipRule="evenodd"
+          >
+            <path d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z" />
+          </svg>
+          <InstagramSvg href={"https://www.instagram.com/neil.in/"} />
           <LinkedInSvg
             href="https://www.linkedin.com/in/neel-patki-17261119/"
-            className="hidden lg:inline"
+            className=""
           />
-          <BehanceSvg href="" className="hidden lg:inline  hover:text-white" />
           <YoutubeLogoSvg href="https://www.youtube.com/channel/UCr5copTsSrMFQT4HrbuR3BQ/featured" />
-          <DiscordSvg />
-          <InstagramSvg href={"https://www.instagram.com/neil.in/"} />
         </div>
-        <div className="text-center  p-10 text-xl">neelpatki@gmail.com</div>
         <div className="text-sm text-center p-4">
           © 2020 Neel Patki. All rights reserved.
         </div>
