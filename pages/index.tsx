@@ -94,10 +94,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col flex-grow p-10">
+        <div className="flex flex-col flex-grow p-10 text-white bg-dark">
           <h1 className="text-xl">About me</h1>
           <div className="flex flex-col">
-            <p className="lg:px-20 py-10 text-md font-medium">
+            <p className="lg:px-20 lg:w-3/4 py-10 text-md font-medium">
               {`I have always been fond of movies. The journey from raw footage to a
           production grade film always piqued my interest. Once i graduated from
           college, i turned my passion into my career. I like to work with my
