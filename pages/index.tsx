@@ -35,8 +35,8 @@ export default function Home() {
     "https://qph.fs.quoracdn.net/main-qimg-92172b29f27e283e70586917075b5bb3",
   ];
   return (
-    <div className="flex flex-col">
-      <Container className="h-screen" id="home">
+    <div className="flex flex-col ">
+      <Container className="h-screen w-full" id="home">
         <nav className="flex flex-row p-10 lg:p-10 items-center space-x-5 lg:space-x-10 lg:text-2xl font-medium text-xl">
           <LogoSvg className="h-12 w-12 lg:h-16 lg:w-16" />
           <div className="flex-grow" />
@@ -83,7 +83,7 @@ export default function Home() {
         <h1 className="text-3xl p-14">About</h1>
         <div className="flex flex-col flex-grow lg:flex-row">
           <img
-            className="w-screen lg:w-max lg:rounded-lg lg:w-1/3 lg:h-52 lg:m-10 "
+            className="w-screen lg:rounded-lg lg:w-1/3 lg:h-52 lg:m-10 "
             src="/img/about_img.png"
             alt="profile"
           ></img>

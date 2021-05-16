@@ -9,9 +9,9 @@ body {
   font-family: monospace;
   background-color: #f2a715;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 .bg-yellow {
   background-color: #f2a715;
 }

@@ -23,7 +23,7 @@ export const WorkPage = () => {
     >
       <h1 className="text-3xl p-20">Work</h1>
       <h2 className="p-20 text-2xl">Photography</h2>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 py-3">
+      <div className="grid grid-cols-1 lg:grid-cols-4 p-10">
         {mounted
           ? data.map((vid, index) => (
               // <div>}`</div>
