@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 
 export const getPlaylist = async () => {
-  const playlistId: string = "PLENB0iyBH9BDaO3JtbmJYMghJcyDK2tkI";
+  const playlistId: string = "PL7Yhv90k8Bu7UdjzbRSn4e5FI7jQN5Xx_";
 
   const requestUrl: string = `https://www.googleapis.com/youtube/v3/playlistItems`;
 

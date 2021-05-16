@@ -23,7 +23,7 @@ export const WorkPage = () => {
     >
       <h1 className="text-3xl p-5">Work</h1>
       <h2 className="px-10 p-2 text-2xl">Videography</h2>
-      <div className="flex flex-row flex-wrap justify-items-center items-center px-4 lg:px-16">
+      <div className="grid grid-cols-2 justify-items-center items-center px-4 lg:px-16">
         {mounted
           ? data.map((vid, index) => (
               // <div>}`</div>
